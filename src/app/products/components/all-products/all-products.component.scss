@@ -58,13 +58,15 @@
 img{
     height: 60vh;
 }
-.title{
-  
-  margin-top: 35px;
-  
+.title{ 
   color: var(--min-color);
   font-size: x-large;
 }
+.title i{ 
+  color: var(--active-color);
+  font-size: x-large;
+}
+
 
 .containe { 
 
@@ -126,6 +128,10 @@ img{
   }
   
 
+.owl-theme .owl-nav {
+     margin-top: 0px; 
+}
+
   @media (max-width: 767px) {
     .containe {
       display: flex;
@@ -183,9 +189,3 @@ img{
   }
   
 
-
-
-
-
-
-  

@@ -14,7 +14,7 @@ import { SearshComponent } from './shared/components/searsh/searsh.component';
 const routes: Routes = [
   { path: "", component: AllProductsComponent },
   { path: "details/:id", component: ProductsDetailsComponent },
-  { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
+  { path: 'cart', component: CartComponent},
   { path: 'search', component: SearshComponent },
   { path: 'login', component: LoginComponent },
   { path: 'Register', component: RegisterComponent },

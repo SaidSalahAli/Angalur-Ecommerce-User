@@ -1,13 +1,35 @@
+/* Navbar */
+.navbar {
+
+ border-bottom: 1px solid #fff ;
+
+
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px 0 0;
+}
+
+.form-select {
+  color: #fff;
+  background-color: #333;
+  border: none;
+}
+
+/* Carousel Item */
 .carousel-item {
   height: 50vh;
 }
 
+/* Card */
 .card {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.footer-cta {
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+.card-title {
+  color: var(--background-color);
 }
 
 .price {
@@ -15,25 +37,43 @@
   font-size: 24px;
 }
 
-.card-title {
-  color: var(--background-color);
-}
-
-.container-fluid {
-  color: var(--background-color);
-}
-.navbar-brand{
-  margin: 0 10px 0 0;
-  font-size: x-large;
-}
-
 .sale-badge {
   background-color: #e53935;
 }
 
-nav{
-  background: var(--background-color);
-  border:1px solid var(--main-color) ;
+/* Footer CTA */
+.footer-cta {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+}
+
+/* Container Fluid */
+.container-fluid {
+  color: var(--background-color);
+}
+
+/* Additional Styling */
+nav {
+ background-color:transparent;
+  border: 1px solid var(--main-color);
+  padding: 13px 0;
 }
 
 
+@media  screen and (max-width:450px){
+  .navbar-brand{
+    font-size: medium;
+  }
+  
+
+
+}
+@media  screen and (min-width:1000px){
+
+  
+
+
+  .cont-select{
+   width: 90%;
+  }
+
+}

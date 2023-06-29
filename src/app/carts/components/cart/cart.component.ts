@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CartsService } from 'src/app/carts/services/carts.service';
+import { UserAuthService } from 'src/app/login-in/services/user-auth.service';
 import { NotificationService } from 'src/app/services/notification-service.service';
 
 @Component({
@@ -10,9 +12,9 @@ import { NotificationService } from 'src/app/services/notification-service.servi
 export class CartComponent implements OnInit {
   cartProducts: any[] = [];
   total: number = 0;
-  success: boolean = false;
 
-  constructor(private update: CartsService, private toastr: NotificationService) {}
+  isUserLogged: boolean = false;
+  constructor(private update: CartsService, private toastr: NotificationService, private userAuthService: UserAuthService, private router: Router) { }
 
   ngOnInit(): void {
     this.cartProducts = this.update.getCartProducts();
@@ -72,8 +74,11 @@ export class CartComponent implements OnInit {
     if (products.length === 0) {
       this.toastr.showError("No products found", "error");
       // Display the success message
+    } else if (this.userAuthService.isUserLogged) {
+      this.toastr.showSuccess("The product has been added.", "Success");
     } else {
-      this.success = true;
+      this.toastr.showError("You are not logged . ", "error");
+      this.router.navigate(['/login']);
     }
   }
 

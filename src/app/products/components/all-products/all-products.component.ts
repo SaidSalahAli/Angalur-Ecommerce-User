@@ -32,12 +32,12 @@ export class AllProductsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getProducts();
-    this.getCategories();
     this.getTopRatedProducts();
     this.getLaptops();
-    this.getSmartPhone();
     this.getDecoration();
+    this.getSmartPhone();
+    this.getCategories();
+    this.getProducts();
     this.scrollService.scrollToTop();
   }
 

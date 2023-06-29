@@ -5,6 +5,7 @@ import { Product } from '../../models/product';
 import { CartsService } from 'src/app/carts/services/carts.service';
 import { SmoothscrollService } from 'src/app/smoothscroll.service';
 import { NotificationService } from 'src/app/services/notification-service.service';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-products-details',
@@ -99,5 +100,32 @@ export class ProductsDetailsComponent implements OnInit {
       this.cartService.addToCart(this.data, this.amount); // Pass the quantity to the addToCart() function
       this.toastr.showSuccess('Product added to cart', 'Success');
     }
+  }
+
+  
+  // Owl carousel options
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 2
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: true
   }
 }

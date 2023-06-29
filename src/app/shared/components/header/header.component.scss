@@ -175,7 +175,7 @@ nav{
   margin-right: 7px;
   margin-left: 7px;
 }
-buton
+
 .menu-btn li {
   margin-bottom: 20px;
 }
@@ -212,9 +212,8 @@ buton
 }
 }
 @media (max-width: 576px) {
-
  .navbar{
-  font-size: smaller;
+  font-size: 13px;
   background-color: var(--background-color);
  }
  .navbar-expand-lg {

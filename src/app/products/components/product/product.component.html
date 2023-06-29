@@ -34,13 +34,13 @@
         </div>
       </div>
       <div class="product-content" routerLink="/details/{{ data.id }}">
-        <h3 class="title">
+        <h6 class="title">
           <a class="product-content">{{
             data.title.length > 15
               ? data.title.substring(0, 15) + "..."
               : data.title
           }}</a>
-        </h3>
+        </h6>
         <div class="price">${{ data.price }}</div>
       </div>
     </div>
